@@ -1,42 +1,12 @@
 import './index.html';
-import './style.css';
+import Vue from 'vue';
+import App from './App.vue';
+
+
 
 new Vue({
   el: "#app",
-  data: {
-    up: 0,
-    down: 0
-
-  },
-
-  methods: {
-    plusUp() {
-      this.up += 1
-    },
-
-    plusDown() {
-      this.down += 1
-    }
-  }
-
+  render: h => h(App),
 });
 
 
-/*let upLikes = 0;
-let downLikes = 0;
-
-const btnUp = document.querySelector('#btn-up');
-const btnDown = document.querySelector('#btn-down');
-
-btnUp.addEventListener('click', () => {
-  upLikes += 1;
-  const likesUpElm = document.querySelector('#likes-up');
-  likesUpElm.textContent = upLikes;
-});
-
-btnDown.addEventListener('click', () => {
-  downLikes += 1;
-  const likesDownElm = document.querySelector('#likes-down');
-  likesDownElm.textContent = downLikes;
-});
-*/
